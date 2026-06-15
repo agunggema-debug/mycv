@@ -119,39 +119,52 @@ function initTypewriter() {
   const el = document.getElementById("roleText");
   if (!el) return;
 
-  const roles = ["IT Specialist", "Web Developer", "System Integrator", "Infrastructure", "Industrial Automation", "Technical Support"];
+  const cursor = el.nextElementSibling;
+  const roles = ["IT Specialist", "Web Developer", "System Integrator", "Infrastructure", "Industrial Automation", "Technical Support", "Designer&Video Editor"];
+  const colors = ["var(--primary)", "var(--accent2)", "var(--accent)", "#38F9D7", "#FACC15", "#0EA5E9", "#F472B6"];
 
   let roleIdx = 0;
   let charIdx = 0;
   let deleting = false;
-  let paused = false;
 
   function type() {
-    if (paused) return;
-
     const current = roles[roleIdx];
+    const currentColor = colors[roleIdx];
+    const glowEffect = `0 0 15px ${currentColor}, 0 0 5px ${currentColor}`;
+
+    el.style.color = currentColor;
+    el.style.textShadow = glowEffect;
+    if (cursor) {
+      cursor.style.color = currentColor;
+      cursor.style.textShadow = glowEffect;
+    }
+
+    let speed = deleting ? 50 : 100;
 
     if (!deleting) {
       el.textContent = current.slice(0, charIdx + 1);
       charIdx++;
+
+      // Jika sudah selesai mengetik satu kata
       if (charIdx === current.length) {
-        paused = true;
-        setTimeout(() => {
-          paused = false;
-          deleting = true;
-        }, 1200);
+        speed = 2000; // Jeda saat kata lengkap
+        deleting = true;
       }
     } else {
       el.textContent = current.slice(0, charIdx - 1);
       charIdx--;
+
+      // Jika sudah selesai menghapus
       if (charIdx === 0) {
         deleting = false;
         roleIdx = (roleIdx + 1) % roles.length;
+        speed = 500; // Jeda sebelum mulai mengetik kata baru
       }
     }
 
-    const speed = deleting ? 50 : 90;
-    setTimeout(type, speed);
+    // Tambahkan sedikit variasi kecepatan agar lebih natural
+    const randomSpeed = speed + (deleting ? 0 : Math.random() * 50);
+    setTimeout(type, randomSpeed);
   }
 
   setTimeout(type, 800);
@@ -492,16 +505,17 @@ function initActiveNavLink() {
     const p = document.createElement("div");
     p.style.cssText = `
       position: absolute;
-      width: ${Math.random() * 3 + 1}px;
-      height: ${Math.random() * 3 + 1}px;
+      width: ${Math.random() * 4 + 1}px;
+      height: ${Math.random() * 4 + 1}px;
       border-radius: 50%;
-      background: rgba(108,99,255,${Math.random() * 0.5 + 0.1});
+      background: rgba(255, 255, 255, ${Math.random() * 0.4 + 0.1});
       left: ${Math.random() * 100}%;
-      top: ${Math.random() * 100}%;
+      top: -20px;
       pointer-events: none;
       z-index: 0;
-      animation: particleFade ${Math.random() * 4 + 3}s ease-in-out infinite;
-      animation-delay: ${Math.random() * 5}s;
+      filter: blur(1px);
+      animation: snowFall ${Math.random() * 10 + 10}s linear infinite;
+      animation-delay: -${Math.random() * 20}s;
     `;
     hero.appendChild(p);
   }
@@ -509,14 +523,16 @@ function initActiveNavLink() {
   // Inject keyframes
   const style = document.createElement("style");
   style.textContent = `
-    @keyframes particleFade {
-      0%, 100% { opacity: 0; transform: translateY(0) scale(1); }
-      50%       { opacity: 1; transform: translateY(-20px) scale(1.5); }
+    @keyframes snowFall {
+      0% { transform: translateY(0) translateX(0); opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { transform: translateY(110vh) translateX(40px); opacity: 0; }
     }
     .nav-links a.active { color: #fff !important; }
     .nav-links a.active::after { width: 100% !important; }
   `;
   document.head.appendChild(style);
 
-  for (let i = 0; i < 30; i++) createParticle();
+  for (let i = 0; i < 60; i++) createParticle();
 })();
