@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Agung Gema — Staff IT</title>
+    <title data-i18n="site_title">Agung Gema — Staff IT</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,14 +18,19 @@
     <nav class="navbar" id="navbar">
       <div class="nav-logo">AG<span class="dot">.</span></div>
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about" data-i18n="nav_about">About</a></li>
+        <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
+        <li><a href="#experience" data-i18n="nav_experience">Experience</a></li>
+        <li><a href="#certifications" data-i18n="nav_certifications">Certifications</a></li>
+        <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
+        <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
       </ul>
-      <a href="#contact" class="nav-cta">Hire Me</a>
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="id">ID</button>
+        <button class="lang-btn" data-lang="zh">繁</button>
+      </div>
+      <a href="#contact" class="nav-cta" data-i18n="nav_hire">Hire Me</a>
       <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     </nav>
 
@@ -41,33 +46,33 @@
       <div class="hero-content">
         <div class="hero-badge">
           <span class="badge-dot"></span>
-          Available for Work
+          <span data-i18n="hero_available">Available for Work</span>
         </div>
         <h1 class="hero-title">
-          <span class="line">Hi, I'm <span class="highlight">Agung</span></span>
-          <span class="line">Gema</span>
+          <span class="line" data-i18n="hero_title1">Hi, I'm <span class="highlight">Agung</span></span>
+          <span class="line" data-i18n="hero_title2">Gema</span>
         </h1>
         <p class="hero-role">
           <span class="role-text" id="roleText"></span>
           <span class="cursor-blink">|</span>
         </p>
-        <p class="hero-desc">
+        <p class="hero-desc" data-i18n="hero_desc">
           I deliver <strong>reliable IT solutions</strong> — from system integration & infrastructure management to industrial automation. Passionate about optimizing operations, troubleshooting complex systems, and keeping businesses
           running smoothly.
         </p>
         <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary"> <i class="fas fa-rocket"></i> View My Work </a>
-          <a href="#contact" class="btn btn-outline"> <i class="fas fa-paper-plane"></i> Get In Touch </a>
+          <a href="#projects" class="btn btn-primary" data-i18n="hero_view_work"> <i class="fas fa-rocket"></i> View My Work </a>
+          <a href="#contact" class="btn btn-outline" data-i18n="hero_get_in_touch"> <i class="fas fa-paper-plane"></i> Get In Touch </a>
         </div>
         <div class="hero-stats">
           <div class="stat">
             <span class="stat-num" data-target="5">0</span><span>+</span>
-            <span class="stat-label">Years Exp.</span>
+            <span class="stat-label" data-i18n="hero_years_exp">Years Exp.</span>
           </div>
           <div class="stat-divider"></div>
           <div class="stat">
             <span class="stat-num" data-target="40">0</span><span>+</span>
-            <span class="stat-label">Projects Done</span>
+            <span class="stat-label" data-i18n="hero_projects_done">Projects Done</span>
           </div>
           <div class="stat-divider"></div>
         </div>
@@ -80,14 +85,14 @@
           <div class="avatar-img">
             <img src="img/me.png" alt="Agung Gema" class="avatar-photo" />
           </div>
-          <div class="floating-badge badge-react"><i class="fas fa-server"></i> Server</div>
-          <div class="floating-badge badge-js"><i class="fas fa-network-wired"></i> Network</div>
-          <div class="floating-badge badge-css"><i class="fas fa-cogs"></i> Systems</div>
+          <div class="floating-badge badge-react"><i class="fas fa-server"></i> <span data-i18n="badge_server">Server</span></div>
+          <div class="floating-badge badge-js"><i class="fas fa-network-wired"></i> <span data-i18n="badge_network">Network</span></div>
+          <div class="floating-badge badge-css"><i class="fas fa-cogs"></i> <span data-i18n="badge_systems">Systems</span></div>
         </div>
       </div>
 
       <a href="#about" class="scroll-down">
-        <span>Scroll Down</span>
+        <span data-i18n="hero_scroll">Scroll Down</span>
         <div class="scroll-arrow">
           <i class="fas fa-chevron-down"></i>
         </div>
@@ -98,8 +103,8 @@
     <section class="about section" id="about">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">Who I Am</span>
-          <h2 class="section-title">About <span class="highlight">Me</span></h2>
+          <span class="section-tag" data-i18n="about_tag">Who I Am</span>
+          <h2 class="section-title" data-i18n="about_title">About <span class="highlight">Me</span></h2>
         </div>
         <div class="about-grid">
           <div class="about-image-wrap reveal">
@@ -110,17 +115,17 @@
               <div class="about-img-deco"></div>
             </div>
             <div class="about-exp-badge">
-              <span class="exp-num">5+</span>
-              <span class="exp-text">Years of<br />Experience</span>
+              <span class="exp-num">15+</span>
+              <span class="exp-text" data-i18n="about_years_exp">Years of<br />Experience</span>
             </div>
           </div>
           <div class="about-text reveal">
-            <h3>Turning <span class="highlight">Technology</span> Into Operational Excellence</h3>
-            <p>
+            <h3 data-i18n="about_subtitle">Turning <span class="highlight">Technology</span> Into Operational Excellence</h3>
+            <p data-i18n="about_p1">
               I'm a dedicated <strong>IT Staff — IT Specialist & System Integrator</strong> based in Indonesia, with over 5 years of experience in IT infrastructure, system integration, and industrial automation. I specialize in building
               reliable systems that keep businesses running efficiently.
             </p>
-            <p>
+            <p data-i18n="about_p2">
               My journey started with a deep curiosity for how systems work, and it has evolved into a career where I blend <strong>technical expertise</strong> with <strong>practical problem-solving</strong> to deliver robust IT solutions
               across industries.
             </p>
@@ -128,34 +133,34 @@
               <div class="info-item">
                 <i class="fas fa-map-marker-alt"></i>
                 <div>
-                  <span class="info-label">Location</span>
+                  <span class="info-label" data-i18n="about_location_label">Location</span>
                   <span class="info-value">Majalaya, Bandung, Indonesia</span>
                 </div>
               </div>
               <div class="info-item">
                 <i class="fas fa-envelope"></i>
                 <div>
-                  <span class="info-label">Email</span>
+                  <span class="info-label" data-i18n="about_email_label">Email</span>
                   <span class="info-value">agung@example.com</span>
                 </div>
               </div>
               <div class="info-item">
                 <i class="fas fa-graduation-cap"></i>
                 <div>
-                  <span class="info-label">Education</span>
+                  <span class="info-label" data-i18n="about_education_label">Education</span>
                   <span class="info-value">D1 Komputer Manajemen Informatika — LPP Ariyanti (IP 3.41)</span>
                 </div>
               </div>
               <div class="info-item">
                 <i class="fas fa-briefcase"></i>
                 <div>
-                  <span class="info-label">Company</span>
+                  <span class="info-label" data-i18n="about_company_label">Company</span>
                   <span class="info-value">CV Purnama Tirtatex</span>
                 </div>
               </div>
             </div>
             <div class="about-actions">
-              <a href="#" class="btn btn-primary" download> <i class="fas fa-download"></i> Download CV </a>
+              <a href="#" class="btn btn-primary" download data-i18n="about_download_cv"> <i class="fas fa-download"></i> Download CV </a>
               <div class="social-links">
                 <a href="#" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
                 <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
@@ -172,14 +177,14 @@
     <section class="skills section" id="skills">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">What I Know</span>
-          <h2 class="section-title">Technical <span class="highlight">Skills</span></h2>
+          <span class="section-tag" data-i18n="skills_tag">What I Know</span>
+          <h2 class="section-title" data-i18n="skills_title">Technical <span class="highlight">Skills</span></h2>
         </div>
 
         <div class="skills-tabs">
-          <button class="tab-btn active" data-tab="tech">Software & Development</button>
-          <button class="tab-btn" data-tab="tools">IT Infrastructure</button>
-          <button class="tab-btn" data-tab="soft">Design & Support</button>
+          <button class="tab-btn active" data-tab="tech" data-i18n="skills_tab_tech">Software & Development</button>
+          <button class="tab-btn" data-tab="tools" data-i18n="skills_tab_tools">IT Infrastructure</button>
+          <button class="tab-btn" data-tab="soft" data-i18n="skills_tab_soft">Design & Support</button>
         </div>
 
         <div class="tab-content active" id="tab-tech">
@@ -238,15 +243,15 @@
         <div class="tab-content" id="tab-tools">
           <div class="tools-grid">
             <div class="tool-badge reveal"><i class="fas fa-shield-alt"></i> MikroTik</div>
-            <div class="tool-badge reveal"><i class="fas fa-server"></i> Server Maintenance</div>
-            <div class="tool-badge reveal"><i class="fas fa-hdd"></i> Backup Data</div>
+            <div class="tool-badge reveal"><i class="fas fa-server"></i> <span data-i18n="skill_server_maintenance">Server Maintenance</span></div>
+            <div class="tool-badge reveal"><i class="fas fa-hdd"></i> <span data-i18n="skill_backup_data">Backup Data</span></div>
             <div class="tool-badge reveal"><i class="fas fa-network-wired"></i> LAN / WLAN</div>
             <div class="tool-badge reveal"><i class="fas fa-video"></i> CCTV (DVR)</div>
-            <div class="tool-badge reveal"><i class="fas fa-industry"></i> Timbangan Digital</div>
-            <div class="tool-badge reveal"><i class="fas fa-print"></i> Mesin Printing / Dyeing</div>
-            <div class="tool-badge reveal"><i class="fas fa-ruler-combined"></i> Kalibrasi Perangkat</div>
-            <div class="tool-badge reveal"><i class="fab fa-windows"></i> Windows Installation</div>
-            <div class="tool-badge reveal"><i class="fas fa-desktop"></i> Troubleshooting PC</div>
+            <div class="tool-badge reveal"><i class="fas fa-industry"></i> <span data-i18n="skill_digital_scale">Timbangan Digital</span></div>
+            <div class="tool-badge reveal"><i class="fas fa-print"></i> <span data-i18n="skill_printing_machine">Mesin Printing / Dyeing</span></div>
+            <div class="tool-badge reveal"><i class="fas fa-ruler-combined"></i> <span data-i18n="skill_calibration">Kalibrasi Perangkat</span></div>
+            <div class="tool-badge reveal"><i class="fab fa-windows"></i> <span data-i18n="skill_windows_install">Windows Installation</span></div>
+            <div class="tool-badge reveal"><i class="fas fa-desktop"></i> <span data-i18n="skill_troubleshooting">Troubleshooting PC</span></div>
             <div class="tool-badge reveal"><i class="fas fa-terminal"></i> Linux / CLI</div>
             <div class="tool-badge reveal"><i class="fas fa-cogs"></i> CADS / SPD Config</div>
           </div>
@@ -256,23 +261,23 @@
           <div class="soft-grid">
             <div class="soft-card reveal">
               <div class="soft-icon"><i class="fas fa-paint-brush"></i></div>
-              <h4>Design & Multimedia</h4>
-              <p>Skilled in CorelDraw, Photoshop, Canva for visual design, and Filmora for video editing.</p>
+              <h4 data-i18n="soft_design_title">Design & Multimedia</h4>
+              <p data-i18n="soft_design_desc">Skilled in CorelDraw, Photoshop, Canva for visual design, and Filmora for video editing.</p>
             </div>
             <div class="soft-card reveal">
               <div class="soft-icon"><i class="fas fa-headset"></i></div>
-              <h4>Technical Support</h4>
-              <p>Expert in troubleshooting PC/Laptop, maintaining printers (Inkjet, Dot Matrix, Thermal), and resolving hardware issues.</p>
+              <h4 data-i18n="soft_support_title">Technical Support</h4>
+              <p data-i18n="soft_support_desc">Expert in troubleshooting PC/Laptop, maintaining printers (Inkjet, Dot Matrix, Thermal), and resolving hardware issues.</p>
             </div>
             <div class="soft-card reveal">
               <div class="soft-icon"><i class="fas fa-file-alt"></i></div>
-              <h4>Documentation</h4>
-              <p>Create clear technical documentation, SOPs, Software license management documentation and training materials for end-users and team members.</p>
+              <h4 data-i18n="soft_doc_title">Documentation</h4>
+              <p data-i18n="soft_doc_desc">Create clear technical documentation, SOPs, Software license management documentation and training materials for end-users and team members.</p>
             </div>
             <div class="soft-card reveal">
               <div class="soft-icon"><i class="fas fa-chalkboard-teacher"></i></div>
-              <h4>Training & Mentoring</h4>
-              <p>Conduct training sessions for staff on system usage, best practices, and IT procedures.</p>
+              <h4 data-i18n="soft_training_title">Training & Mentoring</h4>
+              <p data-i18n="soft_training_desc">Conduct training sessions for staff on system usage, best practices, and IT procedures.</p>
             </div>
           </div>
         </div>
@@ -283,8 +288,8 @@
     <section class="experience section" id="experience">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">My Journey</span>
-          <h2 class="section-title">Work <span class="highlight">Experience</span></h2>
+          <span class="section-tag" data-i18n="exp_tag">My Journey</span>
+          <h2 class="section-title" data-i18n="exp_title">Work <span class="highlight">Experience & Education</span></h2>
         </div>
         <div class="timeline">
           <div class="timeline-item reveal">
@@ -292,12 +297,12 @@
             <div class="timeline-card">
               <div class="timeline-header">
                 <div>
-                  <h3>IT Staff — IT Specialist & System Integrator</h3>
+                  <h3 data-i18n="exp_job_title">IT Staff — IT Specialist & System Integrator</h3>
                   <span class="company"><i class="fas fa-building"></i> CV Purnama Tirtatex, Majalaya Bandung</span>
                 </div>
-                <span class="timeline-date">2022 – Present</span>
+                <span class="timeline-date">2011 – Present</span>
               </div>
-              <p>
+              <p data-i18n="exp_job_desc">
                 Managing IT infrastructure, system integration for industrial automation (timbangan digital, mesin printing/dyeing), network administration (MikroTik, LAN/WLAN), CCTV monitoring, technical support, and web development across
                 the organization.
               </p>
@@ -310,12 +315,12 @@
             <div class="timeline-card">
               <div class="timeline-header">
                 <div>
-                  <h3>D1 Komputer Manajemen Informatika</h3>
+                  <h3 data-i18n="exp_edu_title">D1 Komputer Manajemen Informatika</h3>
                   <span class="company"><i class="fas fa-university"></i> LPP Ariyanti — IP 3.41</span>
                 </div>
-                <span class="timeline-date">2016 – 2019</span>
+                <span class="timeline-date">2009 – 2010</span>
               </div>
-              <p>Graduated with GPA 3.41/4.00. Studied computer science fundamentals, database management, networking, and programming. Built a solid foundation in IT systems and software development.</p>
+              <p data-i18n="exp_edu_desc">Graduated with GPA 3.41/4.00. Studied computer science fundamentals, database management, networking, and programming. Built a solid foundation in IT systems and software development.</p>
               <div class="timeline-tags"><span>Networking</span><span>Database</span><span>Programming</span><span>System Admin</span></div>
             </div>
           </div>
@@ -327,12 +332,12 @@
     <section class="certifications section" id="certifications">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">Learning & Development</span>
-          <h2 class="section-title">Certifications & <span class="highlight">Training</span></h2>
+          <span class="section-tag" data-i18n="cert_tag">Learning & Development</span>
+          <h2 class="section-title" data-i18n="cert_title">Certifications & <span class="highlight">Training</span></h2>
         </div>
 
         <div class="section-subheader">
-          <h3 class="sub-title"><i class="fas fa-graduation-cap"></i> Formal Education</h3>
+          <h3 class="sub-title"><i class="fas fa-graduation-cap"></i> <span data-i18n="cert_formal_edu">Formal Education</span></h3>
         </div>
         <div class="cert-grid">
           <div class="cert-card reveal">
@@ -346,7 +351,7 @@
         </div>
 
         <div class="section-subheader" style="margin-top: 2rem">
-          <h3 class="sub-title"><i class="fas fa-certificate"></i> Non-Formal Education & Certifications</h3>
+          <h3 class="sub-title"><i class="fas fa-certificate"></i> <span data-i18n="cert_non_formal">Non-Formal Education & Certifications</span></h3>
         </div>
         <div class="cert-grid">
           <div class="cert-card reveal">
@@ -401,14 +406,14 @@
           <div class="cert-card reveal">
             <div class="cert-icon" style="--c: #2563eb"><i class="fas fa-robot"></i></div>
             <div class="cert-info">
-              <h4>AI Ethics</h4>
+              <h4 data-i18n="cert_ai_ethics">AI Ethics</h4>
               <span class="cert-org">by IBM SkillsBuild</span>
             </div>
           </div>
           <div class="cert-card reveal">
             <div class="cert-icon" style="--c: #7c3aed"><i class="fas fa-magic"></i></div>
             <div class="cert-info">
-              <h4>Introduction to Generative AI</h4>
+              <h4 data-i18n="cert_gen_ai">Introduction to Generative AI</h4>
               <span class="cert-org">by IBM SkillsBuild</span>
             </div>
           </div>
@@ -429,14 +434,14 @@
           <div class="cert-card reveal">
             <div class="cert-icon" style="--c: #4338ca"><i class="fas fa-brain"></i></div>
             <div class="cert-info">
-              <h4>Artificial Intelligence Fundamentals</h4>
+              <h4 data-i18n="cert_ai_fundamentals">Artificial Intelligence Fundamentals</h4>
               <span class="cert-org">by IBM SkillsBuild</span>
             </div>
           </div>
           <div class="cert-card reveal">
             <div class="cert-icon" style="--c: #16a34a"><i class="fas fa-mobile-alt"></i></div>
             <div class="cert-info">
-              <h4>Junior Mobile Programmer</h4>
+              <h4 data-i18n="cert_junior_mobile">Junior Mobile Programmer</h4>
               <span class="cert-org">Siantar Codes Academy — Kemenaker</span>
             </div>
           </div>
@@ -450,7 +455,7 @@
           <div class="cert-card reveal">
             <div class="cert-icon" style="--c: #2563eb"><i class="fab fa-microsoft"></i></div>
             <div class="cert-info">
-              <h4>Mengembangkan Aplikasi AI Generative di Azure</h4>
+              <h4 data-i18n="cert_azure_ai">Mengembangkan Aplikasi AI Generative di Azure</h4>
               <span class="cert-org">Microsoft Elevate & Dicoding</span>
             </div>
           </div>
@@ -462,8 +467,8 @@
     <section class="projects section" id="projects">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">My Work</span>
-          <h2 class="section-title">Featured <span class="highlight">Projects</span></h2>
+          <span class="section-tag" data-i18n="projects_tag">My Work</span>
+          <h2 class="section-title" data-i18n="projects_title">Featured <span class="highlight">Projects</span></h2>
         </div>
         <div class="projects-grid">
           <div class="project-card featured reveal">
@@ -475,11 +480,11 @@
                 <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
                 <a href="#" class="project-link"><i class="fab fa-github"></i></a>
               </div>
-              <span class="project-badge">Featured</span>
+              <span class="project-badge" data-i18n="project_badge_featured">Featured</span>
             </div>
             <div class="project-info">
-              <h3>Industrial System Integration</h3>
-              <p>Integrated digital weighing scales (timbangan digital) with production management system. Configured printing/dyeing machines (CADS, SPD) for automated data capture and reporting.</p>
+              <h3 data-i18n="project1_title">Industrial System Integration</h3>
+              <p data-i18n="project1_desc">Integrated digital weighing scales (timbangan digital) with production management system. Configured printing/dyeing machines (CADS, SPD) for automated data capture and reporting.</p>
               <div class="project-tech"><span>Laravel</span><span>Node.js</span><span>Serial Comm</span><span>MySQL</span></div>
             </div>
           </div>
@@ -495,8 +500,8 @@
               </div>
             </div>
             <div class="project-info">
-              <h3>Network Infrastructure Setup</h3>
-              <p>Designed and deployed LAN/WLAN infrastructure with MikroTik routers. Configured VPN, firewall rules, and bandwidth management for 100+ users.</p>
+              <h3 data-i18n="project2_title">Network Infrastructure Setup</h3>
+              <p data-i18n="project2_desc">Designed and deployed LAN/WLAN infrastructure with MikroTik routers. Configured VPN, firewall rules, and bandwidth management for 100+ users.</p>
               <div class="project-tech"><span>MikroTik</span><span>LAN/WAN</span><span>Firewall</span><span>VPN</span></div>
             </div>
           </div>
@@ -512,8 +517,8 @@
               </div>
             </div>
             <div class="project-info">
-              <h3>CCTV Monitoring System</h3>
-              <p>Installed and configured CCTV systems with DVR monitoring across multiple factory locations. Set up remote access for real-time surveillance.</p>
+              <h3 data-i18n="project3_title">CCTV Monitoring System</h3>
+              <p data-i18n="project3_desc">Installed and configured CCTV systems with DVR monitoring across multiple factory locations. Set up remote access for real-time surveillance.</p>
               <div class="project-tech"><span>CCTV</span><span>DVR</span><span>Networking</span><span>Remote Access</span></div>
             </div>
           </div>
@@ -529,8 +534,8 @@
               </div>
             </div>
             <div class="project-info">
-              <h3>Company Portal (WordPress)</h3>
-              <p>Developed and maintained company internal portal using WordPress with custom themes, employee directory, and document management features.</p>
+              <h3 data-i18n="project4_title">Company Portal (WordPress)</h3>
+              <p data-i18n="project4_desc">Developed and maintained company internal portal using WordPress with custom themes, employee directory, and document management features.</p>
               <div class="project-tech"><span>WordPress</span><span>PHP</span><span>MySQL</span><span>Custom Theme</span></div>
             </div>
           </div>
@@ -545,11 +550,11 @@
                 <a href="https://agunggema-debug.github.io/Tech-MTC/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
                 <a href="https://github.com/agunggema-debug/Tech-MTC" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
               </div>
-              <span class="project-badge">Pinned</span>
+              <span class="project-badge" data-i18n="project_badge_pinned">Pinned</span>
             </div>
             <div class="project-info">
               <h3>Tech-MTC — IT Maintenance Dashboard</h3>
-              <p>Dashboard real-time untuk pemeliharaan aset Hardware & Software, Jaringan (Networking), dan sistem pengawasan CCTV.</p>
+              <p data-i18n="project5_desc">Dashboard real-time untuk pemeliharaan aset Hardware & Software, Jaringan (Networking), dan sistem pengawasan CCTV.</p>
               <div class="project-tech"><span>HTML</span><span>Dashboard</span><span>IT Maintenance</span><span>CCTV</span></div>
             </div>
           </div>
@@ -563,11 +568,11 @@
                 <a href="https://dashboard-akuntansi.streamlit.app/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
                 <a href="https://github.com/agunggema-debug/dashboard-akuntansi" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
               </div>
-              <span class="project-badge">Pinned</span>
+              <span class="project-badge" data-i18n="project_badge_pinned">Pinned</span>
             </div>
             <div class="project-info">
-              <h3>Dashboard Akuntansi Garmen</h3>
-              <p>Dashboard analitik berbasis web yang dirancang khusus untuk manajemen industri garmen.</p>
+              <h3 data-i18n="project6_title">Dashboard Akuntansi Garmen</h3>
+              <p data-i18n="project6_desc">Dashboard analitik berbasis web yang dirancang khusus untuk manajemen industri garmen.</p>
               <div class="project-tech"><span>Python</span><span>Streamlit</span><span>Analytics</span></div>
             </div>
           </div>
@@ -581,15 +586,14 @@
                 <a href="https://agunggema-debug.github.io/agri-dashboard/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
                 <a href="https://github.com/agunggema-debug/agri-dashboard" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
               </div>
-              <span class="project-badge">Pinned</span>
+              <span class="project-badge" data-i18n="project_badge_pinned">Pinned</span>
             </div>
             <div class="project-info">
-              <h3>Agri Dashboard</h3>
-              <p>Solusi web modern untuk memantau inventaris dan distribusi produk di sektor Pertanian, Peternakan, Akuakultur, dan Perawatan Hewan.</p>
+              <h3 data-i18n="project7_title">Agri Dashboard</h3>
+              <p data-i18n="project7_desc">Solusi web modern untuk memantau inventaris dan distribusi produk di sektor Pertanian, Peternakan, Akuakultur, dan Perawatan Hewan.</p>
               <div class="project-tech"><span>Vue.js</span><span>Web</span><span>Agriculture</span></div>
             </div>
           </div>
-
 
           <div class="project-card reveal">
             <div class="project-img">
@@ -600,11 +604,11 @@
                 <a href="https://toko-kains.onrender.com/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
                 <a href="https://github.com/agunggema-debug/toko-kains" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
               </div>
-              <span class="project-badge">Pinned</span>
+              <span class="project-badge" data-i18n="project_badge_pinned">Pinned</span>
             </div>
             <div class="project-info">
-              <h3>Toko Kains — AI Rekomendasi</h3>
-              <p>Aplikasi rekomendasi kain personal untuk toko kain memanfaatkan AI dalam meningkatkan pengalaman pelanggan.</p>
+              <h3 data-i18n="project8_title">Toko Kains — AI Rekomendasi</h3>
+              <p data-i18n="project8_desc">Aplikasi rekomendasi kain personal untuk toko kain memanfaatkan AI dalam meningkatkan pengalaman pelanggan.</p>
               <div class="project-tech"><span>HTML</span><span>AI</span><span>E-Commerce</span></div>
             </div>
           </div>
@@ -617,11 +621,11 @@
               <div class="project-overlay">
                 <a href="https://github.com/agunggema-debug/tiktok-shop-dashboard" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
               </div>
-              <span class="project-badge">Pinned</span>
+              <span class="project-badge" data-i18n="project_badge_pinned">Pinned</span>
             </div>
             <div class="project-info">
-              <h3>TikTok Shop Dashboard</h3>
-              <p>TikTok Shop Analytics Dashboard for tracking sales and performance.</p>
+              <h3 data-i18n="project9_title">TikTok Shop Dashboard</h3>
+              <p data-i18n="project9_desc">TikTok Shop Analytics Dashboard for tracking sales and performance.</p>
               <div class="project-tech"><span>JavaScript</span><span>Analytics</span><span>E-Commerce</span></div>
             </div>
           </div>
@@ -634,11 +638,11 @@
               <div class="project-overlay">
                 <a href="https://github.com/agunggema-debug/fainaya-motor" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
               </div>
-              <span class="project-badge">Pinned</span>
+              <span class="project-badge" data-i18n="project_badge_pinned">Pinned</span>
             </div>
             <div class="project-info">
-              <h3>Fainaya Motor — ERP Bengkel</h3>
-              <p>ERP sederhana untuk bengkel motor.</p>
+              <h3 data-i18n="project10_title">Fainaya Motor — ERP Bengkel</h3>
+              <p data-i18n="project10_desc">ERP sederhana untuk bengkel motor.</p>
               <div class="project-tech"><span>Laravel</span><span>Blade</span><span>ERP</span></div>
             </div>
           </div>
@@ -649,32 +653,32 @@
     <section class="contact section" id="contact">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">Let's Talk</span>
-          <h2 class="section-title">Get In <span class="highlight">Touch</span></h2>
+          <span class="section-tag" data-i18n="contact_tag">Let's Talk</span>
+          <h2 class="section-title" data-i18n="contact_title">Get In <span class="highlight">Touch</span></h2>
         </div>
         <div class="contact-grid">
           <div class="contact-info reveal">
-            <h3>Let's Build Something <span class="highlight">Amazing</span> Together</h3>
-            <p>I'm currently open to new opportunities. Whether you need IT infrastructure support, system integration, or just want to say hi — my inbox is always open!</p>
+            <h3 data-i18n="contact_subtitle">Let's Build Something <span class="highlight">Amazing</span> Together</h3>
+            <p data-i18n="contact_desc">I'm currently open to new opportunities. Whether you need IT infrastructure support, system integration, or just want to say hi — my inbox is always open!</p>
             <div class="contact-cards">
               <a href="mailto:agung@example.com" class="contact-card">
                 <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
                 <div>
-                  <span class="contact-card-label">Email</span>
+                  <span class="contact-card-label" data-i18n="contact_email_label">Email</span>
                   <span class="contact-card-value">agung@gmail.com</span>
                 </div>
               </a>
               <a href="tel:+6281234567890" class="contact-card">
                 <div class="contact-card-icon"><i class="fas fa-phone"></i></div>
                 <div>
-                  <span class="contact-card-label">Phone</span>
+                  <span class="contact-card-label" data-i18n="contact_phone_label">Phone</span>
                   <span class="contact-card-value">+62 812-3456-7890</span>
                 </div>
               </a>
               <div class="contact-card">
                 <div class="contact-card-icon"><i class="fas fa-map-marker-alt"></i></div>
                 <div>
-                  <span class="contact-card-label">Location</span>
+                  <span class="contact-card-label" data-i18n="contact_location_label">Location</span>
                   <span class="contact-card-value">Ciparay, Cimahi, Batujajar, Bandung, Indonesia</span>
                 </div>
               </div>
@@ -690,24 +694,24 @@
           <form class="contact-form reveal" id="contactForm">
             <div class="form-row">
               <div class="form-group">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" placeholder="John Doe" required />
+                <label for="name" data-i18n="form_name_label">Full Name</label>
+                <input type="text" id="name" data-i18n-placeholder="form_name_placeholder" placeholder="John Doe" required />
               </div>
               <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" placeholder="john@example.com" required />
+                <label for="email" data-i18n="form_email_label">Email Address</label>
+                <input type="email" id="email" data-i18n-placeholder="form_email_placeholder" placeholder="john@example.com" required />
               </div>
             </div>
             <div class="form-group">
-              <label for="subject">Subject</label>
-              <input type="text" id="subject" placeholder="Project Inquiry" required />
+              <label for="subject" data-i18n="form_subject_label">Subject</label>
+              <input type="text" id="subject" data-i18n-placeholder="form_subject_placeholder" placeholder="Project Inquiry" required />
             </div>
             <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+              <label for="message" data-i18n="form_message_label">Message</label>
+              <textarea id="message" rows="5" data-i18n-placeholder="form_message_placeholder" placeholder="Tell me about your project..." required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary btn-full"><i class="fas fa-paper-plane"></i> Send Message</button>
-            <div class="form-success" id="formSuccess"><i class="fas fa-check-circle"></i> Message sent successfully! I'll get back to you soon.</div>
+            <button type="submit" class="btn btn-primary btn-full" data-i18n="form_send"><i class="fas fa-paper-plane"></i> Send Message</button>
+            <div class="form-success" id="formSuccess"><i class="fas fa-check-circle"></i> <span data-i18n="form_success">Message sent successfully! I'll get back to you soon.</span></div>
           </form>
         </div>
       </div>
@@ -718,8 +722,8 @@
       <div class="container">
         <div class="footer-content">
           <div class="footer-logo">AG<span class="dot">.</span></div>
-          <p>Crafted with <span class="heart">♥</span> by Agung Gema</p>
-          <p class="footer-copy">© 2026 All rights reserved.</p>
+          <p data-i18n="footer_crafted">Crafted with <span class="heart">♥</span> by Agung Gema</p>
+          <p class="footer-copy" data-i18n="footer_copy">© 2026 All rights reserved.</p>
         </div>
       </div>
     </footer>
