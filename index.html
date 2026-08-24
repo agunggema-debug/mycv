@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
   </head>
   <body>
     <!-- ─── CURSOR GLOW ─── -->
@@ -214,14 +216,39 @@
               <span class="skill-pct">85%</span>
             </div>
             <div class="skill-card reveal">
+              <div class="skill-icon" style="--c: #3776AB"><i class="fab fa-python"></i></div>
+              <h4>Python</h4>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+              <span class="skill-pct">85%</span>
+            </div>
+            <div class="skill-card reveal">
+              <div class="skill-icon" style="--c: ##232429"><i class="fab fa-js"></i></div>
+              <h4>Next.js</h4>
+              <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+              <span class="skill-pct">85%</span>
+            </div>
+            <div class="skill-card reveal">
               <div class="skill-icon" style="--c: #3be397"><i class="fa-brands fa-node-js"></i></div>
               <h4>Node.js</h4>
               <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
               <span class="skill-pct">80%</span>
             </div>
             <div class="skill-card reveal">
+              <div class="skill-icon" style="--c: #232429">   
+              <img src="img/astro-logo-light-gradient.svg" alt="Astro Logo" width="50" height="50" /></div>
+              <h4>Astro</h4>
+              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+              <span class="skill-pct">80%</span>
+            </div>
+            <div class="skill-card reveal">
               <div class="skill-icon" style="--c: #e34f26"><i class="fab fa-html5"></i></div>
               <h4>HTML</h4>
+              <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+              <span class="skill-pct">90%</span>
+            </div>
+            <div class="skill-card reveal">
+              <div class="skill-icon" style="--c: #3a70f0"><i class="fab fa-css3"></i></div>
+              <h4>CSS</h4>
               <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
               <span class="skill-pct">90%</span>
             </div>
@@ -236,6 +263,18 @@
               <h4>SQLite, MySQL, PostgreSQL / Database</h4>
               <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
               <span class="skill-pct">85%</span>
+            </div>
+            <div class="skill-card reveal">
+              <div class="skill-icon" style="--c: #061f59"><i class="devicon-photoshop-plain colored"></i></div>
+              <h4>Adobe Photoshop</h4>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+              <span class="skill-pct">90%</span>
+            </div>
+            <div class="skill-card reveal">
+              <div class="skill-icon" style="--c: #00C4CC"> <iconify-icon icon="simple-icons:canva" style="color: white; font-size: 28px;"></iconify-icon></div>
+              <h4>Canva</h4>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+              <span class="skill-pct">90%</span>
             </div>
           </div>
         </div>
@@ -469,8 +508,28 @@
         <div class="section-header">
           <span class="section-tag" data-i18n="projects_tag">My Work</span>
           <h2 class="section-title" data-i18n="projects_title">Featured <span class="highlight">Projects</span></h2>
-        </div>
+        </div>        
+
+          <!-- ─── PINNED FROM GITHUB ─── -->
         <div class="projects-grid">
+          <div class="project-card featured reveal">
+            <div class="project-img">
+              <div class="project-img-placeholder">
+                <i class="fas fa-palette"></i>
+              </div>
+              <div class="project-overlay">
+                <a href="https://nadeera-teknik.vercel.app/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                <a href="https://github.com/agunggema-debug/nadeera-teknik" class="project-link"><i class="fab fa-github"></i></a>
+              </div>
+              <span class="project-badge" data-i18n="project_badge_featured">Featured</span>
+            </div>
+            <div class="project-info">
+              <h3>Nadeera Teknik — Website Jasa AC Bandung</h3>
+              <p>Landing page lead generation untuk jasa pemasangan, perawatan, dan perbaikan AC di Bandung Raya yang dibangun dengan Astro + Tailwind CSS.</p>
+              <div class="project-tech"><span>Astro</span><span>Tailwind CSS</span><span>TypeScript</span><span>Supabase</span></div>
+            </div>
+          </div>
+          
           <div class="project-card featured reveal">
             <div class="project-img">
               <div class="project-img-placeholder">
@@ -480,7 +539,7 @@
                 <a href="https://fainayaforyou.vercel.app/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
                 <a href="https://github.com/agunggema-debug/fainayaforyou" class="project-link"><i class="fab fa-github"></i></a>
               </div>
-              <span class="project-badge" data-i18n="project_badge_featured">Featured</span>
+              <span class="project-badge" data-i18n="project_badge_pinned">Pinned</span> 
             </div>
             <div class="project-info">
               <h3>Fainaya For You</h3>
@@ -489,7 +548,7 @@
             </div>
           </div>
 
-          <div class="project-card featured reveal">
+          <div class="project-card reveal">
             <div class="project-img">
               <div class="project-img-placeholder">
                 <i class="fas fa-palette"></i>
@@ -497,8 +556,8 @@
               <div class="project-overlay">
                 <a href="https://fainaya.netlify.app/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
                 <a href="https://github.com/agunggema-debug/Fainaya" class="project-link"><i class="fab fa-github"></i></a>
-              </div>
-              <span class="project-badge" data-i18n="project_badge_featured">Featured</span>
+              </div> 
+              <span class="project-badge" data-i18n="project_badge_pinned">Pinned</span>              
             </div>
             <div class="project-info">
               <h3>Fainaya Services & Art</h3>
@@ -507,21 +566,21 @@
             </div>
           </div>
 
-          <div class="project-card featured reveal">
+          <div class="project-card reveal">
             <div class="project-img">
               <div class="project-img-placeholder">
                 <i class="fas fa-industry"></i>
               </div>
               <div class="project-overlay">
                 <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                <a href="https://github.com/agunggema-debug/purnama-textile" class="project-link"><i class="fab fa-github"></i></a>
               </div>
-              <span class="project-badge" data-i18n="project_badge_featured">Featured</span>
+              <span class="project-badge" data-i18n="project_badge_pinned">Pinned</span>              
             </div>
             <div class="project-info">
               <h3 data-i18n="project1_title">Industrial System Integration</h3>
-              <p data-i18n="project1_desc">Integrated digital weighing scales (timbangan digital) with production management system. Configured printing/dyeing machines (CADS, SPD) for automated data capture and reporting.</p>
-              <div class="project-tech"><span>Laravel</span><span>Node.js</span><span>Serial Comm</span><span>MySQL</span></div>
+              <p data-i18n="project1_desc">Sistem Enterprise Resource Planning (ERP) & Supply Chain Management (SCM) internal untuk Purnama Textile, dirancang berjalan on-premise di jaringan intranet pabrik.</p>
+              <div class="project-tech"><span>Python</span><span>React</span><span>Vite</span><span>PostgreSQL</span><span>Redis</span><span>JWT</span><span>Docker</span></div>
             </div>
           </div>
 
@@ -534,12 +593,14 @@
                 <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
                 <a href="#" class="project-link"><i class="fab fa-github"></i></a>
               </div>
+              <span class="project-badge" data-i18n="project_badge_pinned">Pinned</span>
             </div>
             <div class="project-info">
               <h3 data-i18n="project2_title">Network Infrastructure Setup</h3>
               <p data-i18n="project2_desc">Designed and deployed LAN/WLAN infrastructure with MikroTik routers. Configured VPN, firewall rules, and bandwidth management for 100+ users.</p>
               <div class="project-tech"><span>MikroTik</span><span>LAN/WAN</span><span>Firewall</span><span>VPN</span></div>
             </div>
+            <span class="project-badge" data-i18n="project_badge_pinned">Pinned</span>
           </div>
 
           <div class="project-card reveal">
@@ -551,6 +612,7 @@
                 <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
                 <a href="#" class="project-link"><i class="fab fa-github"></i></a>
               </div>
+              <span class="project-badge" data-i18n="project_badge_pinned">Pinned</span>
             </div>
             <div class="project-info">
               <h3 data-i18n="project3_title">CCTV Monitoring System</h3>
@@ -568,6 +630,7 @@
                 <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
                 <a href="#" class="project-link"><i class="fab fa-github"></i></a>
               </div>
+              <span class="project-badge" data-i18n="project_badge_pinned">Pinned</span>
             </div>
             <div class="project-info">
               <h3 data-i18n="project4_title">Company Portal (WordPress)</h3>
@@ -575,8 +638,6 @@
               <div class="project-tech"><span>WordPress</span><span>PHP</span><span>MySQL</span><span>Custom Theme</span></div>
             </div>
           </div>
-
-          <!-- ─── PINNED FROM GITHUB ─── -->
           <div class="project-card reveal">
             <div class="project-img">
               <div class="project-img-placeholder">
